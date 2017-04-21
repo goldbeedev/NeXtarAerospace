@@ -1,0 +1,34 @@
+
+#page1 {
+	background: url('../images/nebula.jpeg') no-repeat center center fixed;
+}
+
+#page2 {
+	background: url('../images/austronaut.jpeg') no-repeat center center fixed;
+}
+
+#page3 {
+	background: url('../images/shuttlelaunch.jpeg') no-repeat center center fixed;
+}
+
+.pages {
+	height: 1200px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+#nav ul li{
+	display: inline-block;
+}
+
+#nav {
+	float: right;
+}

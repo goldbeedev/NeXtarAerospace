@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="css/main.css">
 
 </head>
 
-<body>
+<body ng-app="app">
 
 <div id="nav">
 	<ul>
@@ -16,9 +16,12 @@
 	</ul>
 </div>
 
-<div id="page1"></div>
-<div id="page2"></div>
-<div id="page3"></div>
+
+<!-- Maybe create a transparent div that is at the bottom/top of the page and fade in and out when hovered for additional page nav -->
+	<div id="page1" class="pages"></div>
+	<div id="page2" class="pages"></div>
+	<div id="page3" class="pages"></div>
+
 
 </body>
 
