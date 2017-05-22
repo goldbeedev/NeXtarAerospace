@@ -1,0 +1,29 @@
+{
+  "name": "nextaraerospace",
+  "version": "1.0.0",
+  "description": "Mock Aerospace Site",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon ./src/index.js localhost 5000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goldbeedev/NeXtarAerospace.git"
+  },
+  "author": "Justin Goldby",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/goldbeedev/NeXtarAerospace/issues"
+  },
+  "homepage": "https://github.com/goldbeedev/NeXtarAerospace#readme",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-animate": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "nodemon": "^1.11.0",
+    "path": "^0.12.7",
+    "smoothscroll": "^0.3.0"
+  }
+}

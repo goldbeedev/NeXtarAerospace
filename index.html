@@ -1,29 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<title>NeXtarAerospace</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/main.css">
+<link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
 
 </head>
 
 <body ng-app="app">
 
-<div id="nav">
-	<ul>
-		<li><a href="#page1">Page1</a></li>
-		<li><a href="#page2">Page2</a></li>
-		<li><a href="#page3">Page3</a></li>
-
-	</ul>
-</div>
+	<div ng-view></div>
 
 
-<!-- Maybe create a transparent div that is at the bottom/top of the page and fade in and out when hovered for additional page nav -->
-	<div id="page1" class="pages"></div>
-	<div id="page2" class="pages"></div>
-	<div id="page3" class="pages"></div>
 
 
+
+<script src="vendor/angular.js"></script>
+<script src="vendor/angular-route.js"></script>
+<script src="vendor/angular-animate.js"></script>
+<script src="js/app.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/mainController.js"></script>
 </body>
-
-
 </html>
