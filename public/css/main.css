@@ -1,3 +1,7 @@
+* {
+	border: 2px solid red;
+}
+
 
 #page1 {
 	background: url('../images/nebula.jpeg') no-repeat center center fixed;
@@ -26,14 +30,52 @@ body {
 }
 
 #nav ul li{
-	display: inline-block;
+	display: inline;
+
 }
 
 #nav {
 	font-family: 'Exo 2';
 	position: fixed;
+	top: 0;
+	width: 100%;
 }
 
-#nav ul {
+.navlinks {
 	float: right;
+}
+
+.logotext {
+	font-family: 'Exo 2';
+	float: left;
+}
+
+.pageContentleft {
+	position: absolute;
+	display: block;
+	text-align: center;
+	width: 30%;
+	top: 50%;
+	left: 5%;
+	margin-left: 3.3%;
+}
+
+.pageContentright {
+	position: absolute;
+	display: block;
+	text-align: center;
+	width: 30%;
+	top: 50%;
+	right: 5%;
+	margin-left: 3.3%;
+}
+
+.header {
+	margin: 100px;
+	text-align: center;
+}
+
+.nasapotd {
+	max-width: 100%;
+
 }
