@@ -14,9 +14,22 @@
 	<div id="page1" class="pages">
 		<h1 class="header">Mission</h1>
 			<div class="pageContentleft">
-					<img class="nasapotd" src="{{test2}}">
+				<button ng-click="RoverShow = !RoverShow">Rover</button>.
+					<img class="nasapotd" src="{{test2}}"> 
+						<div ng-show="RoverShow">
+							<select>
+						<option>Front Hazard Avoidance Camera</option>
+					<option>Rear Hazard Avoidance Camera</option>
+				<option>Mast Camera</option>
+			<option>Chemistry and Camera Complex</option>
+		<option>Mars Hand Lens Imager</option>
+	<option>Navigation Camera</option>
+</select>
+	<input value="Longitude" ng-model="testlon">{{testlon}}</input>
+		<input value="Latitude" ng-model="testlat">{{testlat}}</input>
+			</div>
 					<button ng-click="testfunc()">button</button>
-					<button>button</button>
+					<button ng-click="anotherAPICall()">button</button>
 					<button>button</button>
 
 				</div>

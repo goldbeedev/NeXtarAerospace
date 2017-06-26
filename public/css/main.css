@@ -31,7 +31,16 @@ body {
 
 #nav ul li{
 	display: inline;
+	font-family: 'Exo 2';
+	color: white;
+	font-size: 24px;
+	text-decoration: none;
+}
 
+h1 {
+	font-family: 'Exo 2';
+	color: white;
+	font-size: 12;
 }
 
 #nav {
@@ -39,15 +48,27 @@ body {
 	position: fixed;
 	top: 0;
 	width: 100%;
+	background-color: black;
 }
 
 .navlinks {
 	float: right;
+	padding: 0px;
+	margin: 0px;
+}
+
+.navlinks li a {
+	color: white;
+	text-align: center;
+	text-decoration: none;
 }
 
 .logotext {
 	font-family: 'Exo 2';
 	float: left;
+	color: white;
+	font-size: 24px;
+	margin: 0px;
 }
 
 .pageContentleft {
