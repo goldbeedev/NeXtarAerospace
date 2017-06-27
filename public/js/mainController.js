@@ -36,9 +36,9 @@ $scope.testfunc = function(){
 } //end testfunc
 
 $scope.anotherAPICall = function(){
-	$scope.yyyy = 2014;
-	$scope.mm = 1;
-	$scope.dd = 24;
+	$scope.yyyy;
+	$scope.mm;
+	$scope.dd;
 	$scope.camera = "fhaz";
 	// question mark marks beginning of query string, & sign separates indidvual variables within the string
 	$http.get("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=" + $scope.yyyy + "-" + $scope.mm + "-" + $scope.dd + "camera=" + $scope.camera + "&api_key=e9i490OQTmaJm70cRYYo5LiyhG9UWQ9j0Uxl8xoQ")
