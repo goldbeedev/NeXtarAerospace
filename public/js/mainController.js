@@ -35,11 +35,20 @@ $scope.testfunc = function(){
 	console.log("test func working"); 
 } //end testfunc
 
+$scope.camera = null;
+
+$scope.cams = [
+	{name: "Front Hazard Avoidance Camera", code: "fhaz"},
+	{name: "Rear Hazard Avoidance Camera", code: "rhaz"},
+	{name: "Mast Camera", code: "mast"},
+	{name: "Chemistry and Camera Complex", code: "chemcam"}
+]
+
 $scope.anotherAPICall = function(){
-	$scope.yyyy;
-	$scope.mm;
-	$scope.dd;
-	$scope.camera = "fhaz";
+	// $scope.yyyy;
+	// $scope.mm;
+	// $scope.dd;
+	// $scope.camera = "fhaz";
 	// question mark marks beginning of query string, & sign separates indidvual variables within the string
 	$http.get("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=" + $scope.yyyy + "-" + $scope.mm + "-" + $scope.dd + "camera=" + $scope.camera + "&api_key=e9i490OQTmaJm70cRYYo5LiyhG9UWQ9j0Uxl8xoQ")
 	.then(function(response){

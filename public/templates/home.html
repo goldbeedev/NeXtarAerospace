@@ -18,14 +18,9 @@
 					<img class="nasapotd" src="{{test2}}"> 
 						<div ng-show="RoverShow">
 							<select>
-						<option>Front Hazard Avoidance Camera</option>
-					<option>Rear Hazard Avoidance Camera</option>
-				<option>Mast Camera</option>
-			<option>Chemistry and Camera Complex</option>
-		<option>Mars Hand Lens Imager</option>
-	<option>Navigation Camera</option>
-</select>
-	<input value="Longitude" ng-model="testlon">{{testlon}}</input>
+						<option ng-repeat="cams in cams">{{cams.name}}</option>
+</select><span ng-model="cams.code">{{cams.code}}</span>
+	<input value="Longitude" ng-model="testlon">{{cams.code}}</input>
 		<input value="Latitude" ng-model="testlat">{{testlat}}</input>
 			</div>
 					<button ng-click="testfunc()">button</button>
