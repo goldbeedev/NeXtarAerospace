@@ -17,10 +17,11 @@
 				<button ng-click="RoverShow = !RoverShow">Rover</button>.
 					<img class="nasapotd" src="{{test2}}"> 
 						<div ng-show="RoverShow">
-							<select>
+							<select ng-change="rovercam()">
+								<option>Select Rover Camera</option>
 						<option ng-repeat="cams in cams">{{cams.name}}</option>
-</select><span ng-model="cams.code">{{cams.code}}</span>
-	<input value="Longitude" ng-model="testlon">{{cams.code}}</input>
+</select>
+	<input value="cams.code" ng-model="testlon">{{cams.code}}</input>
 		<input value="Latitude" ng-model="testlat">{{testlat}}</input>
 			</div>
 					<button ng-click="testfunc()">button</button>

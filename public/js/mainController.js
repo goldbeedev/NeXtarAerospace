@@ -37,12 +37,19 @@ $scope.testfunc = function(){
 
 $scope.camera = null;
 
+//instantiate cameraCode on the scope to manipulate what code is chosen
+$scope.cameraCode = null;
+
 $scope.cams = [
 	{name: "Front Hazard Avoidance Camera", code: "fhaz"},
 	{name: "Rear Hazard Avoidance Camera", code: "rhaz"},
 	{name: "Mast Camera", code: "mast"},
 	{name: "Chemistry and Camera Complex", code: "chemcam"}
 ]
+
+$scope.rovercam = function(){
+//when cam is changed grab that options index code property and set it to camera code scope, 
+}
 
 $scope.anotherAPICall = function(){
 	// $scope.yyyy;
