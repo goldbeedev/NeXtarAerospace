@@ -17,11 +17,11 @@
 				<button ng-click="RoverShow = !RoverShow">Rover</button>.
 					<img class="nasapotd" src="{{test2}}"> 
 						<div ng-show="RoverShow">
-							<select ng-change="rovercam()">
+							<select ng-model="cams" ng-change="rovercam($index)"> <!-- passing the $index directive into the function, figure out why this is broken -->
 								<option>Select Rover Camera</option>
 						<option ng-repeat="cams in cams">{{cams.name}}</option>
 </select>
-	<input value="cams.code" ng-model="testlon">{{cams.code}}</input>
+	<input value="Longitude" ng-model="testlon">{{testlon}}</input>
 		<input value="Latitude" ng-model="testlat">{{testlat}}</input>
 			</div>
 					<button ng-click="testfunc()">button</button>

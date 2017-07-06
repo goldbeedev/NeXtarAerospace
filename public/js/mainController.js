@@ -47,8 +47,15 @@ $scope.cams = [
 	{name: "Chemistry and Camera Complex", code: "chemcam"}
 ]
 
-$scope.rovercam = function(){
+$scope.toggleDisplay = function(index) {
+ console.log("This is the current cam code: " + $scope.cams[index].code);
+}
+
+console.log("these are the cams on the scope " + $scope.cams[0].name);
+
+$scope.rovercam = function(index){
 //when cam is changed grab that options index code property and set it to camera code scope, 
+console.log("This is the current cam code: " + $scope.cams[index].code);
 }
 
 $scope.anotherAPICall = function(){
