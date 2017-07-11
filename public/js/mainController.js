@@ -40,6 +40,7 @@ $scope.camera = null;
 //instantiate cameraCode on the scope to manipulate what code is chosen
 $scope.cameraCode = null;
 
+
 $scope.cams = [
 	{name: "Front Hazard Avoidance Camera", code: "fhaz"},
 	{name: "Rear Hazard Avoidance Camera", code: "rhaz"},
@@ -47,15 +48,19 @@ $scope.cams = [
 	{name: "Chemistry and Camera Complex", code: "chemcam"}
 ]
 
-$scope.toggleDisplay = function(index) {
- console.log("This is the current cam code: " + $scope.cams[index].code);
-}
+$scope.curCam = $scope.cams[0];
 
-console.log("these are the cams on the scope " + $scope.cams[0].name);
 
 $scope.rovercam = function(index){
 //when cam is changed grab that options index code property and set it to camera code scope, 
-console.log("This is the current cam code: " + $scope.cams[index].code);
+
+
+//store selected cam index as a variable 
+var camIndex = $scope.cams.indexOf(index);
+
+console.log(camIndex);
+
+// console.log("This is the current cam code: " + $scope.cams[camIndex].code); //searching for the code property of the cam index we are on.
 }
 
 $scope.anotherAPICall = function(){
