@@ -40,25 +40,26 @@ $scope.camera = null;
 //instantiate cameraCode on the scope to manipulate what code is chosen
 $scope.cameraCode = null;
 
-
+//create cams array with camera objects.
 $scope.cams = [
 	{name: "Front Hazard Avoidance Camera", code: "fhaz"},
 	{name: "Rear Hazard Avoidance Camera", code: "rhaz"},
 	{name: "Mast Camera", code: "mast"},
-	{name: "Chemistry and Camera Complex", code: "chemcam"}
+	{name: "Chemistry and Camera Complex", code: "chemcam"},
+	{name: "Mars Hand Lens Imager", code: "mahli"},
+	{name: "Mars Descent Imager", code: "mardi"},
+	{name: "Navigation Camera", code: "navcam"},
 ]
 
+//instantiate curCam on the scope
 $scope.curCam = $scope.cams[0];
 
 
-$scope.rovercam = function(index){
+$scope.rovercam = function(){
 //when cam is changed grab that options index code property and set it to camera code scope, 
 
-
 //store selected cam index as a variable 
-var camIndex = $scope.cams.indexOf(index);
-
-console.log(camIndex);
+console.log($scope.curCam);
 
 // console.log("This is the current cam code: " + $scope.cams[camIndex].code); //searching for the code property of the cam index we are on.
 }
@@ -67,9 +68,8 @@ $scope.anotherAPICall = function(){
 	// $scope.yyyy;
 	// $scope.mm;
 	// $scope.dd;
-	// $scope.camera = "fhaz";
 	// question mark marks beginning of query string, & sign separates indidvual variables within the string
-	$http.get("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=" + $scope.yyyy + "-" + $scope.mm + "-" + $scope.dd + "camera=" + $scope.camera + "&api_key=e9i490OQTmaJm70cRYYo5LiyhG9UWQ9j0Uxl8xoQ")
+	$http.get("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=" + $scope.yyyy + "-" + $scope.mm + "-" + $scope.dd + "camera=" + $scope.curCam + "&api_key=e9i490OQTmaJm70cRYYo5LiyhG9UWQ9j0Uxl8xoQ")
 	.then(function(response){
 		console.log(response);
 		$scope.imagedata = response.data
