@@ -23,11 +23,12 @@
 						<option ng-repeat="cam in cams" value="{{cam.code}}">{{cam.name}}</option>
 </select>
 {{curCam}}
-	<input value="Longitude" ng-model="testlon">{{testlon}}</input>
-		<input value="Latitude" ng-model="testlat">{{testlat}}</input>
-			</div>
+	<input value="{{yyyy}}" ng-model="yyyy">{{yyyy}}</input>
+		<input value="{{mm}}" ng-model="mm">{{mm}}</input>
+			<input value="{{dd}}" ng-model="dd">{{dd}}</input>
+				</div>
 					<button ng-click="testfunc()">button</button>
-					<button ng-click="anotherAPICall()">button</button>
+					<button ng-click="anotherAPICall()">Get Rover Photo</button>
 					<button>button</button>
 
 				</div>

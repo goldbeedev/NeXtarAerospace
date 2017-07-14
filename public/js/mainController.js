@@ -64,6 +64,10 @@ console.log($scope.curCam);
 // console.log("This is the current cam code: " + $scope.cams[camIndex].code); //searching for the code property of the cam index we are on.
 }
 
+$scope.yyyy = "Year";
+$scope.mm = "Month";
+$scope.dd = "Day";
+
 $scope.anotherAPICall = function(){
 	// $scope.yyyy;
 	// $scope.mm;
