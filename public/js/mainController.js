@@ -73,11 +73,15 @@ $scope.anotherAPICall = function(){
 	// $scope.mm;
 	// $scope.dd;
 	// question mark marks beginning of query string, & sign separates indidvual variables within the string
-	$http.get("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=" + $scope.yyyy + "-" + $scope.mm + "-" + $scope.dd + "camera=" + $scope.curCam + "&api_key=e9i490OQTmaJm70cRYYo5LiyhG9UWQ9j0Uxl8xoQ")
+	$http.get("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=" + $scope.yyyy + "-" + $scope.mm + "-" + $scope.dd + "&camera=" + $scope.curCam + "&api_key=e9i490OQTmaJm70cRYYo5LiyhG9UWQ9j0Uxl8xoQ")
 	.then(function(response){
 		console.log(response);
-		$scope.imagedata = response.data
-		console.log("this is the mars rover data: " + $scope.imagedata);
+		$scope.roverdata = response.data
+		console.log("this is the mars rover data: " + $scope.roverdata);
+		console.log("these are the images: " + $scope.roverdata.photos[0].id);
+
+		//just testing the image with the first item in the array, maybe use a loop to push all images returned into their own array and display a gallery-
+		$scope.test2 = $scope.roverdata.photos[0].img_src;
 	}); //end $http.get function(response)
 	console.log("test func working"); 
 } //end testfunc
