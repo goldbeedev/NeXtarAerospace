@@ -68,6 +68,9 @@ $scope.yyyy = "Year";
 $scope.mm = "Month";
 $scope.dd = "Day";
 
+//instantiate rover photos array
+$scope.roverphotos = [];
+
 $scope.anotherAPICall = function(){
 	// $scope.yyyy;
 	// $scope.mm;
@@ -79,6 +82,13 @@ $scope.anotherAPICall = function(){
 		$scope.roverdata = response.data
 		console.log("this is the mars rover data: " + $scope.roverdata);
 		console.log("these are the images: " + $scope.roverdata.photos[0].id);
+
+		//for loopo to push images returned 
+		for (var i = 0; i <= $scope.roverdata.photos.length; i++) {
+			//this isnt working below ----
+			$scope.roverphotos.push($scope.roverdata.photos[i].img_src);
+		}
+		console.log("These are the pushed rover photos: " + $scope.roverphotos);
 
 		//just testing the image with the first item in the array, maybe use a loop to push all images returned into their own array and display a gallery-
 		$scope.test2 = $scope.roverdata.photos[0].img_src;
