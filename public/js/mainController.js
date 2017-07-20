@@ -82,13 +82,17 @@ $scope.anotherAPICall = function(){
 		$scope.roverdata = response.data
 		console.log("this is the mars rover data: " + $scope.roverdata);
 		console.log("these are the images: " + $scope.roverdata.photos[0].id);
+		
+
+		console.log("This is the length of the rover photos: " + $scope.roverdata.photos.length);
 
 		//for loopo to push images returned 
-		for (var i = 0; i <= $scope.roverdata.photos.length; i++) {
-			//this isnt working below ----
+		for (var i = 0; i < $scope.roverdata.photos.length; i++) {
+			//this isnt working below ---- figure out how to just push the img_src!
 			$scope.roverphotos.push($scope.roverdata.photos[i].img_src);
 		}
 		console.log("These are the pushed rover photos: " + $scope.roverphotos);
+		console.log("This is the rover photos length: " + $scope.roverphotos.length);
 
 		//just testing the image with the first item in the array, maybe use a loop to push all images returned into their own array and display a gallery-
 		$scope.test2 = $scope.roverdata.photos[0].img_src;
