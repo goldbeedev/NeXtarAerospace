@@ -98,5 +98,28 @@ h1 {
 
 .nasapotd {
 	max-width: 100%;
+}
 
+i {
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+  	border: solid white;
+  	border-width: 0 4px 4px 0;
+  	width: 15px;
+  	height: 15px;
+  	display: inline-block;
+  	padding: 3px;
+  	position: absolute;
+  	top: 50%;
+  	right: 2.5%;
+  	cursor: pointer;
+  }
+
+.right {
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+}
+
+.imagewrap {
+	position: relative;
 }
