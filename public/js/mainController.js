@@ -71,6 +71,9 @@ $scope.dd = "Day";
 //instantiate rover photos array
 $scope.roverphotos = [];
 
+//starting index on the scope for changing purposes
+var startingIndex = 0
+
 $scope.anotherAPICall = function(){
 	// $scope.yyyy;
 	// $scope.mm;
@@ -78,6 +81,7 @@ $scope.anotherAPICall = function(){
 	// question mark marks beginning of query string, & sign separates indidvual variables within the string
 	$http.get("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=" + $scope.yyyy + "-" + $scope.mm + "-" + $scope.dd + "&camera=" + $scope.curCam + "&api_key=e9i490OQTmaJm70cRYYo5LiyhG9UWQ9j0Uxl8xoQ")
 	.then(function(response){
+
 		console.log(response);
 		$scope.roverdata = response.data
 		console.log("this is the mars rover data: " + $scope.roverdata);
@@ -94,10 +98,16 @@ $scope.anotherAPICall = function(){
 		console.log("This is the rover photos length: " + $scope.roverphotos.length);
 
 		//just testing the image with the first item in the array, maybe use a loop to push all images returned into their own array and display a gallery-
-		$scope.test2 = $scope.roverphotos[0];
+		$scope.test2 = $scope.roverphotos[startingIndex];
 	}); //end $http.get function(response)
 	console.log("test func working"); 
-} //end testfunc
+} //end anotherAPICall
+
+$scope.ScrollRight = function(){
+	startingIndex = startingIndex + 1;
+	console.log($scope.test2);
+	$scope.test2 = $scope.roverphotos[startingIndex];
+}
 
 NasaData(); //calling the Nasa APOD api picture for testing purposes, may have this be the default API call upon page load.
 

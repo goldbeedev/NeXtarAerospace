@@ -15,7 +15,7 @@
 		<h1 class="header">Mission</h1>
 			<div class="pageContentleft">
 				<button ng-click="RoverShow = !RoverShow">Rover</button>.
-					<div class="imagewrap"><img class="nasapotd" src="{{test2}}"><i ng-click="ScrollRight" class="arrow right"></i></div>
+					<div class="imagewrap"><img class="nasapotd" src="{{test2}}"><i ng-click="ScrollRight()" class="arrow right"></i></div>
 						<div ng-show="RoverShow">
 							<select ng-model="curCam" ng-change="rovercam()"> <!-- passing the $index directive into the function, figure out why this is broken -->
 								<option>Select Rover Camera</option>
