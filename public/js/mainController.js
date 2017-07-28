@@ -8,32 +8,35 @@ angular.module('app')
 //set location to equal $location for data binding on the template
 $scope.$location = $location;
 
+//function to get the astronomy photo of the day
 function NasaData(){
 	$http.get("https://api.nasa.gov/planetary/apod?api_key=e9i490OQTmaJm70cRYYo5LiyhG9UWQ9j0Uxl8xoQ")
 	.then(function(response){
 		console.log(response);
-		$scope.test = response.data;
-		$scope.test2 = $scope.test.hdurl;
+		//nasa apod response data.
+		$scope.apoddata = response.data;
+		//sets the image window on mission page to the image returned from the api call.
+		$scope.imagewindow = $scope.test.hdurl;
 		console.log($scope.test);
-		console.log($scope.test2);
+		console.log($scope.imagewindow);
 	}); //end function respons
 
 } //end function NasaData
 
-$scope.testfunc = function(){
-	// $scope.testlon = 100.75;
-	// $scope.testlat = 1.5;
-	// question mark marks beginning of query string, & sign separates indidvual variables within the string
-	$http.get("https://api.nasa.gov/planetary/earth/imagery?lon=" + $scope.testlon + "&lat=" + $scope.testlat + "&date=2014-02-01&cloud_score=True&api_key=e9i490OQTmaJm70cRYYo5LiyhG9UWQ9j0Uxl8xoQ")
-	.then(function(response){
-		console.log(response);
-		console.log("this is the testlon data: " + $scope.testlon);
-		$scope.imagedata = response.data
-		console.log("this is the earth imagery data: " + $scope.imagedata);
-		$scope.test2 = $scope.imagedata.url;
-	}); //end $http.get function(response)
-	console.log("test func working"); 
-} //end testfunc
+// $scope.testfunc = function(){
+// 	// $scope.testlon = 100.75;
+// 	// $scope.testlat = 1.5;
+// 	// question mark marks beginning of query string, & sign separates indidvual variables within the string
+// 	$http.get("https://api.nasa.gov/planetary/earth/imagery?lon=" + $scope.testlon + "&lat=" + $scope.testlat + "&date=2014-02-01&cloud_score=True&api_key=e9i490OQTmaJm70cRYYo5LiyhG9UWQ9j0Uxl8xoQ")
+// 	.then(function(response){
+// 		console.log(response);
+// 		console.log("this is the testlon data: " + $scope.testlon);
+// 		$scope.imagedata = response.data
+// 		console.log("this is the earth imagery data: " + $scope.imagedata);
+// 		$scope.test2 = $scope.imagedata.url;
+// 	}); //end $http.get function(response)
+// 	console.log("test func working"); 
+// } //end testfunc
 
 $scope.camera = null;
 
@@ -75,6 +78,7 @@ $scope.roverphotos = [];
 var startingIndex = 0
 
 $scope.anotherAPICall = function(){
+	startingIndex = 0;
 	// $scope.yyyy;
 	// $scope.mm;
 	// $scope.dd;
@@ -103,10 +107,35 @@ $scope.anotherAPICall = function(){
 	console.log("test func working"); 
 } //end anotherAPICall
 
+
+//***********************************************************
+//***********************************************************
+//*********** NOTES *****************************************
+//add errors for incorrect date ranges on the rover photo viewer!
+//maybe add an image counter for the gallery that shows up?
+//Prevent image window from refreshing and date range selected on rover photos when navigating different sections.
+//Fix smoothscroll stuff
+//Make gallery arrows hidden until rover is selected (maybe add fade effects?).
+//style the fuckin site!
+
 $scope.ScrollRight = function(){
+	//set roverlength variable
+	var roverlength = $scope.roverphotos.length;
+	console.log("var roverlength test:" + roverlength);
+	//increment the starting index to scroll photos
 	startingIndex = startingIndex + 1;
 	console.log($scope.test2);
 	$scope.test2 = $scope.roverphotos[startingIndex];
+
+	console.log("this is the starting index: " + startingIndex);
+	//if the photo is at the last index in the gallery start over at the first photo.
+	if (startingIndex === $scope.roverphotos.length - 1) {
+		console.log("The current image is the last in the gallery");
+		startingIndex = -1;
+	} else {
+		console.log("not at the last image yet");
+	}
+	//end else
 }
 
 NasaData(); //calling the Nasa APOD api picture for testing purposes, may have this be the default API call upon page load.
