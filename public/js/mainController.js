@@ -103,6 +103,8 @@ $scope.anotherAPICall = function(){
 
 		//just testing the image with the first item in the array, maybe use a loop to push all images returned into their own array and display a gallery-
 		$scope.test2 = $scope.roverphotos[startingIndex];
+
+		angular.element(document).find("i").removeClass("hidden");
 	}); //end $http.get function(response)
 	console.log("test func working"); 
 } //end anotherAPICall
@@ -136,6 +138,11 @@ $scope.ScrollRight = function(){
 		console.log("not at the last image yet");
 	}
 	//end else
+} //end ScrollRight
+
+$scope.ScrollLeft = function(){
+
+
 }
 
 NasaData(); //calling the Nasa APOD api picture for testing purposes, may have this be the default API call upon page load.

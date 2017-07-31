@@ -100,7 +100,7 @@ h1 {
 	max-width: 100%;
 }
 
-i {
+i.right {
 	border-top-right-radius: 10px;
 	border-bottom-left-radius: 10px;
   	border: solid white;
@@ -115,6 +115,26 @@ i {
   	cursor: pointer;
   }
 
+i.left {
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+  	border: solid white;
+  	border-width: 0 4px 4px 0;
+  	width: 15px;
+  	height: 15px;
+  	display: inline-block;
+  	padding: 3px;
+  	position: absolute;
+  	top: 50%;
+  	left: 2.5%;
+  	cursor: pointer;
+}
+
+.left {
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+}
+
 .right {
 	transform: rotate(-45deg);
 	-webkit-transform: rotate(-45deg);
@@ -122,4 +142,8 @@ i {
 
 .imagewrap {
 	position: relative;
+}
+
+.hidden {
+	display: none;
 }
