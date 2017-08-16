@@ -141,9 +141,16 @@ $scope.ScrollRight = function(){
 } //end ScrollRight
 
 $scope.ScrollLeft = function(){
+	//if the starting index is the starting index make it the last one in the array
+	if (startingIndex === 0) {
+		startingIndex = $scope.roverphotos.length -1;
+	} else {
+		startingIndex = startingIndex - 1;
+	}
+	//set the test2 image to the correct index image
+	$scope.test2 = $scope.roverphotos[startingIndex];
 
-
-}
+} //end ScrollLeft
 
 NasaData(); //calling the Nasa APOD api picture for testing purposes, may have this be the default API call upon page load.
 
