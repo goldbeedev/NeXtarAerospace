@@ -107,12 +107,12 @@ i.right {
   	border-width: 0 4px 4px 0;
   	width: 15px;
   	height: 15px;
-  	display: inline-block;
   	padding: 3px;
   	position: absolute;
   	top: 50%;
   	right: 2.5%;
   	cursor: pointer;
+  	display: none;
   }
 
 i.left {
@@ -122,12 +122,12 @@ i.left {
   	border-width: 0 4px 4px 0;
   	width: 15px;
   	height: 15px;
-  	display: inline-block;
   	padding: 3px;
   	position: absolute;
   	top: 50%;
   	left: 2.5%;
   	cursor: pointer;
+  	display: none;
 }
 
 .left {

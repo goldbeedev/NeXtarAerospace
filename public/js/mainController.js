@@ -16,7 +16,7 @@ function NasaData(){
 		//nasa apod response data.
 		$scope.apoddata = response.data;
 		//sets the image window on mission page to the image returned from the api call.
-		$scope.imagewindow = $scope.test.hdurl;
+		$scope.imagewindow = $scope.apoddata.hdurl;
 		console.log($scope.test);
 		console.log($scope.imagewindow);
 	}); //end function respons
@@ -102,9 +102,12 @@ $scope.anotherAPICall = function(){
 		console.log("This is the rover photos length: " + $scope.roverphotos.length);
 
 		//just testing the image with the first item in the array, maybe use a loop to push all images returned into their own array and display a gallery-
-		$scope.test2 = $scope.roverphotos[startingIndex];
-
-		angular.element(document).find("i").removeClass("hidden");
+		$scope.imagewindow = $scope.roverphotos[startingIndex];
+		//jquery makes our lives easy showing the gallery scroll arrows.
+		if ($scope.roverphotos.length > 1) {
+			$(".arrow").show();
+	}
+		// angular.element(document).find("i").removeClass("hidden");
 	}); //end $http.get function(response)
 	console.log("test func working"); 
 } //end anotherAPICall
@@ -127,7 +130,7 @@ $scope.ScrollRight = function(){
 	//increment the starting index to scroll photos
 	startingIndex = startingIndex + 1;
 	console.log($scope.test2);
-	$scope.test2 = $scope.roverphotos[startingIndex];
+	$scope.imagewindow = $scope.roverphotos[startingIndex];
 
 	console.log("this is the starting index: " + startingIndex);
 	//if the photo is at the last index in the gallery start over at the first photo.
@@ -148,7 +151,7 @@ $scope.ScrollLeft = function(){
 		startingIndex = startingIndex - 1;
 	}
 	//set the test2 image to the correct index image
-	$scope.test2 = $scope.roverphotos[startingIndex];
+	$scope.imagewindow = $scope.roverphotos[startingIndex];
 
 } //end ScrollLeft
 
