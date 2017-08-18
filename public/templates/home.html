@@ -13,12 +13,13 @@
 <!-- Maybe create a transparent div that is at the bottom/top of the page and fade in and out when hovered for additional page nav that when clicked scrolls the page up or down-->
 	<div id="page1" class="pages">
 		<h1 class="header">Mission</h1>
-			<div class="pageContentleft">
-				<button ng-click="RoverShow = !RoverShow">Rover</button>.
-					<div class="imagewrap"><img class="nasapotd" src="{{imagewindow}}"><i ng-click="ScrollRight()" class="arrow right"></i><i ng-click="ScrollLeft()" class="arrow left"></i></div>
-						<div ng-show="RoverShow">
-							<select ng-model="curCam" ng-change="rovercam()"> <!-- passing the $index directive into the function, figure out why this is broken -->
-								<option>Select Rover Camera</option>
+			<div class="backgroundBlock">
+				<div class="pageContentleft">
+					<button ng-click="RoverShow = !RoverShow">Rover</button>.
+						<div class="imagewrap"><img class="nasapotd" src="{{imagewindow}}"><i ng-click="ScrollRight()" class="arrow right"></i><i ng-click="ScrollLeft()" class="arrow left"></i></div>
+							<div ng-show="RoverShow">
+								<select ng-model="curCam" ng-change="rovercam()"> <!-- passing the $index directive into the function, figure out why this is broken -->
+									<option>Select Rover Camera</option>
 
 						<option ng-repeat="cam in cams" value="{{cam.code}}">{{cam.name}}</option>
 </select>
@@ -35,6 +36,7 @@
 			<div class="pageContentright">
 					<p>Some writing goes here bla bla bla</p>
 				</div>
+			</div> <!-- end background block -->
 		</div>
 	<div id="page2" class="pages">
 		<h1 class="header">Triumph</h1>

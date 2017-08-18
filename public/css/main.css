@@ -79,6 +79,7 @@ h1 {
 	top: 50%;
 	left: 5%;
 	margin-left: 3.3%;
+	z-index: 1;
 }
 
 .pageContentright {
@@ -89,6 +90,7 @@ h1 {
 	top: 50%;
 	right: 5%;
 	margin-left: 3.3%;
+	z-index: 1;
 }
 
 .header {
@@ -146,4 +148,12 @@ i.left {
 
 .hidden {
 	display: none;
+}
+
+.backgroundBlock {
+	background-color: black;
+	width: 66%;
+	height: 50%;
+	left: 5%;
+	right: 5%;
 }

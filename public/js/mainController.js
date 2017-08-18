@@ -17,7 +17,6 @@ function NasaData(){
 		$scope.apoddata = response.data;
 		//sets the image window on mission page to the image returned from the api call.
 		$scope.imagewindow = $scope.apoddata.hdurl;
-		console.log($scope.test);
 		console.log($scope.imagewindow);
 	}); //end function respons
 
