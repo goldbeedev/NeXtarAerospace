@@ -76,18 +76,21 @@ h1 {
 	display: block;
 	text-align: center;
 	width: 30%;
-	top: 50%;
+	top: 33%;
 	left: 5%;
 	margin-left: 3.3%;
 	z-index: 1;
 }
 
 .pageContentright {
+	font-family: 'Roboto Condensed';
+	font-size: 24px;
+	color: white;
 	position: absolute;
 	display: block;
 	text-align: center;
 	width: 30%;
-	top: 50%;
+	top: 33%;
 	right: 5%;
 	margin-left: 3.3%;
 	z-index: 1;
@@ -151,9 +154,10 @@ i.left {
 }
 
 .backgroundBlock {
+	position: absolute;
 	background-color: black;
-	width: 66%;
-	height: 50%;
+	width: 90%;
+	height: 75%;
 	left: 5%;
 	right: 5%;
 }
