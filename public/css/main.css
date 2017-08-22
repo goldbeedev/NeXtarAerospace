@@ -49,6 +49,7 @@ h1 {
 	top: 0;
 	width: 100%;
 	background-color: black;
+	z-index: 50;
 }
 
 .navlinks {
@@ -76,6 +77,7 @@ h1 {
 	display: block;
 	text-align: center;
 	width: 30%;
+	max-height: 300px;
 	top: 33%;
 	left: 5%;
 	margin-left: 3.3%;
@@ -154,10 +156,14 @@ i.left {
 }
 
 .backgroundBlock {
+	border: 1px solid black;
+	outline: rgba(255,255,255,.2) solid 1px;
+	outline-offset : -2px;
 	position: absolute;
 	background-color: black;
 	width: 90%;
 	height: 75%;
 	left: 5%;
 	right: 5%;
+	opacity: .65;
 }
