@@ -3,6 +3,9 @@
 var express = require('express'),
   bodyParser = require('body-parser'),
   path = require('path');
+  // smoothScroll = require('smoothscroll');
+
+
 
 
 var app = express();
