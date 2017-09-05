@@ -157,5 +157,35 @@ $scope.ScrollLeft = function(){
 NasaData(); //calling the Nasa APOD api picture for testing purposes, may have this be the default API call upon page load.
 
 
+//smoothscroll
+
+var mission = document.querySelector('#mission');
+var triumph = document.querySelector('#triumph');
+var projection = document.querySelector('#projection');
+
+// var exampleDestination = document.querySelector('#page1');
+
+// var handleClick = function(event) {
+// 	event.preventDefault();
+
+// 	smoothScroll(exampleDestination);
+// }; //end handleClick
+
+mission.addEventListener('click', function(event){
+	event.preventDefault();
+	smoothScroll(document.querySelector('#page1'));
+});
+
+triumph.addEventListener('click', function(event){
+	event.preventDefault();
+	smoothScroll(document.querySelector('#page2'));
+});
+
+projection.addEventListener('click', function(event){
+	event.preventDefault();
+	smoothScroll(document.querySelector('#page3'));
+});
+
+
 }]);	//end controller
 })(); //end self invoked function

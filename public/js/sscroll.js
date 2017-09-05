@@ -1,16 +1,17 @@
-// (function(){
-// 'use strict'
+(function(){
+'use strict'
 
-// var mission = document.querySelector('.triumph');
 
-// var exampleDestination = document.querySelector('.page2');
+var mission = document.querySelector('#mission');
 
-// var handleClick = function(event) {
-// 	event.preventDefault();
+var exampleDestination = document.querySelector('#page2');
 
-// 	smoothScroll(exampleDestination);
-// };
+var handleClick = function(event) {
+	event.preventDefault();
 
-// mission.addEventListener('click', handleClick);
+	smoothScroll(exampleDestination);
+}; //end handleClick
 
-// })(); //end self invoked function
+mission.addEventListener('click', handleClick);
+
+})(); //end self invoked function

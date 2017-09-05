@@ -3,7 +3,7 @@
 var express = require('express'),
   bodyParser = require('body-parser'),
   path = require('path');
-  // smoothScroll = require('smoothscroll');
+
 
 
 
@@ -25,6 +25,10 @@ app.get('/vendor/angular-route.js', function(req, res) {
 app.get('/vendor/angular-animate.js', function(req,res){
   res.sendFile(path.join(__dirname, '../node_modules', 'angular-animate', 'angular-animate.js'));
 });
+app.get('/vendor/smoothscroll.js', function(req,res){
+  res.sendFile(path.join(__dirname, '../node_modules', 'smoothscroll', 'smoothscroll.js'));
+});
+
 
 app.listen(port);
 console.log('Magic happens on port ' + port);
