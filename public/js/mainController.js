@@ -22,21 +22,6 @@ function NasaData(){
 
 } //end function NasaData
 
-// $scope.testfunc = function(){
-// 	// $scope.testlon = 100.75;
-// 	// $scope.testlat = 1.5;
-// 	// question mark marks beginning of query string, & sign separates indidvual variables within the string
-// 	$http.get("https://api.nasa.gov/planetary/earth/imagery?lon=" + $scope.testlon + "&lat=" + $scope.testlat + "&date=2014-02-01&cloud_score=True&api_key=e9i490OQTmaJm70cRYYo5LiyhG9UWQ9j0Uxl8xoQ")
-// 	.then(function(response){
-// 		console.log(response);
-// 		console.log("this is the testlon data: " + $scope.testlon);
-// 		$scope.imagedata = response.data
-// 		console.log("this is the earth imagery data: " + $scope.imagedata);
-// 		$scope.test2 = $scope.imagedata.url;
-// 	}); //end $http.get function(response)
-// 	console.log("test func working"); 
-// } //end testfunc
-
 $scope.camera = null;
 
 //instantiate cameraCode on the scope to manipulate what code is chosen

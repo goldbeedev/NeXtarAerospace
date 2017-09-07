@@ -13,10 +13,10 @@
 <!-- Maybe create a transparent div that is at the bottom/top of the page and fade in and out when hovered for additional page nav that when clicked scrolls the page up or down-->
 	<div id="page1" class="pages">
 		<h1 class="header">Mission</h1>
-			<div class="backgroundBlock"></div> <!-- end background block -->
+			<div class="backgroundBlock"> 
 				<div class="pageContentleft">
 					<button ng-click="RoverShow = !RoverShow">Rover</button>.
-						<div class="imagewrap"><img class="nasapotd" src="{{imagewindow}}"><i ng-click="ScrollRight()" class="arrow right"></i><i ng-click="ScrollLeft()" class="arrow left"></i></div>
+						<div class="imagewrap"><img class="nasapotd" src="{{imagewindow}}"><i ng-click="ScrollRight()" class="arrow right"></i><i ng-click="ScrollLeft()" class="arrow left"></i></div> <!-- end imagewrap -->
 							<div ng-show="RoverShow">
 								<select ng-model="curCam" ng-change="rovercam()"> <!-- passing the $index directive into the function, figure out why this is broken -->
 									<option>Select Rover Camera</option>
@@ -28,15 +28,13 @@
 		<input value="{{mm}}" ng-model="mm">{{mm}}</input>
 			<input value="{{dd}}" ng-model="dd">{{dd}}</input>
 				</div>
-					<button ng-click="testfunc()">button</button>
 					<button ng-click="anotherAPICall()">Get Rover Photo</button>
-					<button>button</button>
-
-				</div>
+						</div> <!-- end pageContentleft -->
 			<div class="pageContentright">
 					<p>NextarAerospace is currently working alongside NASA and SpaceX to push mankind further into the space age.  This is the landing page for our company a data driven software company aiding SpaceX and NASA on various projects supporting the human mars mission.  We have specialty engineers working on software that provide data to further our understanding and knowledge of what it takes to potentially colonize mars.  On the left when the page loads is a "NASA Astronomy Photo Of the Day."  When the rover tab is clicked type in a date range and select a camera to see the photos we have been collecting over the years.  This widget focuses on photos from the "Curiosity" rover, as that robot has the most available cameras to choose from, and highest photo count.  We will update the query with more features like a mission manifest in the near future.</p>
-				</div>
-			</div>
+					</div> <!-- end pageContentright-->
+				</div> <!-- end background block -->
+			</div> <!-- end page1 -->
 	<div id="page2" class="pages">
 		<h1 class="header">Triumph</h1>
 			<div class="backgroundBlock"></div>
