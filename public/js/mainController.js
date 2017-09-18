@@ -62,6 +62,7 @@ $scope.roverphotos = [];
 var startingIndex = 0
 
 $scope.anotherAPICall = function(){
+	$scope.roverphotos = [];
 	startingIndex = 0;
 	// $scope.yyyy;
 	// $scope.mm;
