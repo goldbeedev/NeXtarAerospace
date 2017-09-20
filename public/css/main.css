@@ -52,7 +52,8 @@ h1 {
 	font-size: 12;
 	text-shadow: 5px 5px 8px #000000;
 	margin: 0px;
-	padding: 0px;
+	padding-top: 25px;
+	padding-bottom: 25px;
 }
 
 #nav {
@@ -88,9 +89,9 @@ h1 {
 	position: absolute;
 	display: block;
 	text-align: center;
-	width: 30%;
+	width: 40%;
 	max-height: 300px;
-	top: 33%;
+	top: 15%;
 	left: 5%;
 	margin-left: 3.3%;
 	z-index: 1;
@@ -98,13 +99,13 @@ h1 {
 
 .pageContentright {
 	font-family: 'Roboto Condensed';
-	font-size: 24px;
+	font-size: 20px;
 	color: white;
 	position: absolute;
 	display: block;
 	text-align: center;
-	width: 30%;
-	top: 33%;
+	width: 40%;
+	top: 15%;
 	right: 5%;
 	margin-left: 3.3%;
 	z-index: 1;
@@ -173,10 +174,9 @@ i.left {
 	position: absolute;
 	background-color: rgba(0,0,0,0.3);
 	max-width: 90%;
-	max-height: 75%;
 	left: 5%;
 	right: 5%;
-
+	height: 1000px;
 }
 
 button {
