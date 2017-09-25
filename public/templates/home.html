@@ -15,18 +15,17 @@
 		<h1 class="header">Mission</h1>
 			<div class="backgroundBlock"> 
 				<div class="pageContentleft">
-					<button ng-click="RoverShow = !RoverShow">Rover</button>.
+					<button ng-click="RoverShow = !RoverShow">Rover</button>
 						<div class="imagewrap"><img class="nasapotd" src="{{imagewindow}}"><i ng-click="ScrollRight()" class="arrow right"></i><i ng-click="ScrollLeft()" class="arrow left"></i></div> <!-- end imagewrap -->
 							<div ng-show="RoverShow">
 								<select ng-model="curCam" ng-change="rovercam()"> <!-- passing the $index directive into the function, figure out why this is broken -->
-									<option>Select Rover Camera</option>
+									<option ng-selected="RoverShow">Select Rover Camera</option>
 
 						<option ng-repeat="cam in cams" value="{{cam.code}}">{{cam.name}}</option>
 </select>
-{{curCam}}
-	<input value="{{yyyy}}" ng-model="yyyy">{{yyyy}}</input>
-		<input value="{{mm}}" ng-model="mm">{{mm}}</input>
-			<input value="{{dd}}" ng-model="dd">{{dd}}</input>
+	<input value="{{yyyy}}" ng-model="yyyy"></input>
+		<input value="{{mm}}" ng-model="mm"></input>
+			<input value="{{dd}}" ng-model="dd"></input>
 				</div>
 					<button ng-click="anotherAPICall()">Get Rover Photo</button>
 						</div> <!-- end pageContentleft -->
@@ -42,4 +41,7 @@
 	<div id="page3" class="pages">
 		<h1 class="header">Projection</h1>
 			<div class="backgroundBlock"></div>
+		</div>
+<div id="footer">
+	<p class="logotext">&copy;</p>
 		</div>
