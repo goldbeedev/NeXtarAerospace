@@ -51,6 +51,7 @@ body {
 	color: black;
 }
 
+
 h1 {
 	font-family: 'Exo 2';
 	color: white;
@@ -211,18 +212,30 @@ button:hover {
 and (min-width : 320px)
 and (max-width : 480px) {
 /* Styles */
+.js {
+	display: none;
+}
+
+
 }
  
 /* Smartphones (landscape) ----------- */
 @media only screen
 and (min-width : 321px) {
 /* Styles */
+
+
 }
  
 /* Smartphones (portrait) ----------- */
 @media only screen
 and (max-width : 320px) {
 /* Styles */
+.js {
+	display: none;
+}
+
+
 }
  
 /* iPads (portrait and landscape) ----------- */

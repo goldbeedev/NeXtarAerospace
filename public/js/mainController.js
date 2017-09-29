@@ -8,6 +8,13 @@ angular.module('app')
 //set location to equal $location for data binding on the template
 $scope.$location = $location;
 
+//append function to append class that hides the nav links for responsive design.
+function navAppend() {
+	var navlinks = angular.element(document.querySelector('.navlinks'));
+	navlinks.addClass('js');
+
+} //end function navAppend
+
 //function to get the astronomy photo of the day
 function NasaData(){
 	$http.get("https://api.nasa.gov/planetary/apod?api_key=e9i490OQTmaJm70cRYYo5LiyhG9UWQ9j0Uxl8xoQ")
@@ -141,7 +148,7 @@ $scope.ScrollLeft = function(){
 } //end ScrollLeft
 
 NasaData(); //calling the Nasa APOD api picture for testing purposes, may have this be the default API call upon page load.
-
+navAppend(); //calling navAppend for media query mobile optimization.
 
 //smoothscroll
 
