@@ -77,6 +77,20 @@ h1 {
 	margin: 0px;
 }
 
+#menu {
+	float: right;
+	color: white;
+	display: none;
+	-webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+#menu:hover {
+	opacity: .50;
+	color: black;
+	cursor: pointer;
+}
+
 .navlinks li a {
 	color: white;
 	text-align: center;
@@ -216,6 +230,21 @@ and (max-width : 480px) {
 	display: none;
 }
 
+#menu {
+	display: initial;
+	font-size: 1.35em;
+}
+
+ul {
+	width: 100%;
+	list-style: none;
+}
+
+li {
+	width: 100%;
+	border-right: none;
+}
+
 
 }
  
@@ -235,6 +264,20 @@ and (max-width : 320px) {
 	display: none;
 }
 
+#menu {
+	display: initial;
+	font-size: 1.35em;
+}
+
+ul {
+	width: 100%;
+	list-style: none;
+}
+
+li {
+	width: 100%;
+	border-right: none;
+}
 
 }
  
